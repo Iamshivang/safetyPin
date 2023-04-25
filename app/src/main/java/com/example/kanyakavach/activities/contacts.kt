@@ -83,8 +83,8 @@ class contacts : AppCompatActivity() {
                 println("User closed the picker without selecting items.")
             }
         }
-        val intent = Intent(this, Sensor::class.java)
-        intent.putExtra(Extra_Name, results)
+        val intent = Intent(this, MainActivity::class.java)
+        intent.putParcelableArrayListExtra(Extra_Name, results)
         startActivity(intent)
     }
 
